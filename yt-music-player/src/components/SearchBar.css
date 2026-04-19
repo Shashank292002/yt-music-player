@@ -1,0 +1,102 @@
+.sb-wrap { width: 100%; }
+
+.sb-form { margin-bottom: 8px; }
+
+.sb-inner {
+  display: flex;
+  align-items: center;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 100px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+  height: 40px;
+}
+.sb-inner:focus-within { border-color: var(--red); }
+
+.sb-icon {
+  padding: 0 12px;
+  color: var(--text3);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.sb-input {
+  flex: 1;
+  min-width: 0;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-size: 14px;
+  height: 100%;
+  font-family: var(--font);
+}
+.sb-input::placeholder { color: var(--text3); }
+
+.sb-clear {
+  padding: 0 10px;
+  color: var(--text3);
+  display: flex;
+  align-items: center;
+  transition: color 0.15s;
+  flex-shrink: 0;
+}
+.sb-clear:hover { color: var(--text2); }
+
+.sb-btn {
+  flex-shrink: 0;
+  margin: 4px;
+  padding: 0 18px;
+  height: 32px;
+  background: var(--red);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font);
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.15s, transform 0.1s;
+  white-space: nowrap;
+}
+.sb-btn:hover { opacity: 0.88; }
+.sb-btn:active { transform: scale(0.96); }
+.sb-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.sb-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: sb-spin 0.7s linear infinite;
+}
+@keyframes sb-spin { to { transform: rotate(360deg); } }
+
+.sb-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 6px;
+}
+
+.sb-chip {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 100px;
+  background: var(--bg4);
+  border: 1px solid var(--border);
+  color: var(--text2);
+  transition: all 0.15s;
+  white-space: nowrap;
+  font-family: var(--font);
+}
+.sb-chip:hover { background: var(--bg5); color: var(--text); border-color: var(--border2); }
+
+@media (max-width: 768px) {
+  .sb-quick { display: none; }
+}

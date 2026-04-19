@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './SearchBar.css'
 
 const QUICK = ['Arijit Singh', 'Telugu hits', 'Tamil beats', 'Devi Sri Prasad', 'Sid Sriram', 'A.R. Rahman', 'Punjabi hits', 'Lo-fi Hindi']
 

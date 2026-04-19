@@ -1,0 +1,32 @@
+.homepage { display: flex; flex-direction: column; height: 100%; }
+
+.homepage-greet {
+  padding: 20px 24px 4px;
+  flex-shrink: 0;
+}
+
+.greet-text {
+  font-family: var(--font-display);
+  font-size: 32px;
+  letter-spacing: 0.5px;
+  color: var(--text);
+  line-height: 1;
+}
+
+.greet-sub {
+  font-size: 14px;
+  color: var(--text3);
+  margin-top: 4px;
+}
+
+.sections-wrap {
+  overflow-y: auto;
+  flex: 1;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .homepage-greet { padding: 14px 16px 0; }
+  .greet-text { font-size: 24px; }
+  .greet-sub { font-size: 13px; }
+}
